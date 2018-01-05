@@ -60,9 +60,11 @@
     <script>
         window.addEventListener("keydown", function(e) {
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
             if (!audio) return; // if other key pressed then just return 
             audio.currentTime = 0; //rewind to the start (if not writtten then on pressing single key multiple times we get sound after completing previous tone fully.)
             audio.play();
+            console.log(key);
         });
     </script>
 
