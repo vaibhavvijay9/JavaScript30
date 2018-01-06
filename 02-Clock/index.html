@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JS + CSS Clock</title>
+    <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
 
     <style>
         html {
-            background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+            background: #018DED url(cover-image.jpg);
             background-size: cover;
             font-family: 'helvetica neue';
             text-align: center;
@@ -54,7 +55,7 @@
         
         .hand {
             width: 50%;
-            height: 6px;
+            height: 5px;
             background: black;
             position: absolute;
             top: 50%;
@@ -66,6 +67,23 @@
             /*  tick-tick effect  */
             transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
             /*  tick-tick  */
+        }
+        
+        .second-hand {
+            height: 2px;
+            margin-left: 5%;
+            width: 45%;
+        }
+        
+        .min-hand {
+            margin-left: 5%;
+            width: 45%;
+        }
+        
+        .hour-hand {
+            height: 6px;
+            margin-left: 25%;
+            width: 25%;
         }
     </style>
 
