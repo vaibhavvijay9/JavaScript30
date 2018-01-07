@@ -63,6 +63,13 @@
     </style>
 
     <script>
+        const inputs = document.querySelectorAll(".controls input");
+
+        function updateValue() {
+            console.log(this);
+        }
+        inputs.forEach(input => input.addEventListener("change", updateValue));
+        inputs.forEach(input => input.addEventListener("mousemove", updateValue));
     </script>
 
 </body>
