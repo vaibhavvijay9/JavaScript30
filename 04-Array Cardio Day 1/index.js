@@ -168,3 +168,4 @@ const num = data.reduce(function(obj, item) {
     return obj;
 }, {});
 console.log(num);
+//------------
