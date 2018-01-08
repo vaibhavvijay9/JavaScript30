@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>JS + CSS Clock</title>
     <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,100 +17,7 @@
         </div>
     </div>
 
-    <style>
-        html {
-            background: #018DED url(cover-image.jpg);
-            background-size: cover;
-            font-family: 'helvetica neue';
-            text-align: center;
-            font-size: 10px;
-        }
-        
-        body {
-            margin: 0;
-            font-size: 2rem;
-            display: flex;
-            flex: 1;
-            min-height: 100vh;
-            align-items: center;
-        }
-        
-        .clock {
-            width: 30rem;
-            height: 30rem;
-            border: 20px solid white;
-            border-radius: 50%;
-            margin: 50px auto;
-            position: relative;
-            padding: 2rem;
-            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #EFEFEF, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .clock-face {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform: translateY(-3px);
-            /* account for the height of the clock hands */
-        }
-        
-        .hand {
-            width: 50%;
-            height: 5px;
-            background: black;
-            position: absolute;
-            top: 50%;
-            transform-origin: 100%;
-            /*  rotate from the most end of the hand(hour, min, sec) i.e. at centre  */
-            transform: rotate(90deg);
-            /*  set hands to 12:00  */
-            transition: all 0.5s;
-            /*  tick-tick effect  */
-            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-            /*  tick-tick  */
-        }
-        
-        .second-hand {
-            height: 2px;
-            margin-left: 5%;
-            width: 45%;
-        }
-        
-        .min-hand {
-            margin-left: 5%;
-            width: 45%;
-        }
-        
-        .hour-hand {
-            height: 6px;
-            margin-left: 25%;
-            width: 25%;
-        }
-    </style>
-
-    <script>
-        const secondHand = document.querySelector(".second-hand");
-        const minHand = document.querySelector(".min-hand");
-        const hourHand = document.querySelector(".hour-hand");
-
-        function setDate() {
-            const now = new Date();
-
-            const seconds = now.getSeconds();
-            const secondDegrees = ((seconds / 60) * 360) + 90;
-            secondHand.style.transform = `rotate(${secondDegrees}deg)`;
-
-            const mins = now.getMinutes();
-            const minDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
-            minHand.style.transform = `rotate(${minDegrees}deg)`;
-
-            const hour = now.getHours();
-            const hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
-            hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-
-        }
-        setInterval(setDate, 1000); // to call fun every 1 second
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
