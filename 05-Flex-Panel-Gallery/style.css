@@ -36,10 +36,11 @@ body {
     font-size: 20px;
     background-size: cover;
     background-position: center;
-    flex: 1;
     /* flex:1 -> to equally distribute on the screen space */
+    flex: 1;
+    /* ---------------- */
     justify-content: center;
-    align-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
@@ -76,6 +77,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.panel>*:first-child {
+    transform: translateY(-100%)
+}
+
+.panel.open-active>*:first-child {
+    transform: translateY(0)
+}
+
+.panel>*:last-child {
+    transform: translateY(100%)
+}
+
+.panel.open-active>*:last-child {
+    transform: translateY(0)
 }
 
 .panel p {
