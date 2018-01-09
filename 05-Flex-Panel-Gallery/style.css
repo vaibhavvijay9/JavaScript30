@@ -21,6 +21,7 @@ body {
 .panels {
     min-height: 100vh;
     overflow: hidden;
+    display: flex;
 }
 
 .panel {
@@ -35,6 +36,8 @@ body {
     font-size: 20px;
     background-size: cover;
     background-position: center;
+    flex: 1;
+    /* equally distribute on the screen space */
 }
 
 .panel1 {
@@ -57,10 +60,14 @@ body {
     background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
 }
 
+
+/* flex children*/
+
 .panel>* {
     margin: 0;
     width: 100%;
     transition: transform 0.5s;
+    border: 1px solid yellow;
 }
 
 .panel p {
