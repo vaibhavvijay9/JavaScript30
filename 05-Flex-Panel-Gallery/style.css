@@ -37,7 +37,7 @@ body {
     background-size: cover;
     background-position: center;
     flex: 1;
-    /* equally distribute on the screen space */
+    /* flex:1 -> to equally distribute on the screen space */
     justify-content: center;
     align-content: center;
     display: flex;
@@ -72,6 +72,7 @@ body {
     width: 100%;
     transition: transform 0.5s;
     border: 1px solid yellow;
+    flex: 1 0 auto;
 }
 
 .panel p {
