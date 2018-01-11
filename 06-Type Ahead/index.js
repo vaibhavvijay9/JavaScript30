@@ -20,11 +20,23 @@ function findMatches(wordToMatch, cities) {
 function displayMatches() {
     //console.log(this.value); ---->  gives us value of the search input field
     const matchArray = findMatches(this.value, cities);
-    console.log(matchArray);
+    //console.log(matchArray);
+    const html = matchArray.map(place => {
+        const regex = new RegExp(this.value, "gi");
+        const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+        const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
 
+        return `
+        <li>
+        <span class="name">${cityName},${stateName}</span>
+        <span class="population">${place.population}</span>        
+        </li>
+        `;
+    }).join(""); // map returns an array, but we want one string so --->  .join(""); 
+    suggestions.innerHTML = html;
 }
 
 const searchInput = document.querySelector(".search");
-const suggestion_list = document.querySelector(".suggestions");
+const suggestions = document.querySelector(".suggestions");
 
 searchInput.addEventListener("keyup", displayMatches);
