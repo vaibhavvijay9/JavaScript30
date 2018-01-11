@@ -7,4 +7,11 @@ console.log(prom); // promise
 const cities = [];
 fetch(endpoint).then(blob => blob.json())
     .then(data => cities.push(...data)) // ... --> to spread an array
-console.log(cities);
+
+function findMatches(wordToMatch, cities) {
+    return cities.filter(place => {
+        // here we have to check whether a city or state matches what was searched 
+        const regex = new RegExp(wordToMatch, "gi") // gi --> global,insensitive(uppercase/lowercase)
+        return place.city.match(regex) || place.state.match(regex)
+    });
+}
