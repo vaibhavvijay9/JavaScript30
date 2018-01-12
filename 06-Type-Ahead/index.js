@@ -6,7 +6,7 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const cities = [];
 fetch(endpoint).then(blob => blob.json()) // from blob i.e. raw data to json: blob.json()
-    .then(data => cities.push(...data)) // ... --> to spread an array
+    .then(data => cities.push(...data)) // ... --> to spread (i.e unfold) an array
 
 function findMatches(wordToMatch, cities) {
     return cities.filter(place => {

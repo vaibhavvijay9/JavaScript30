@@ -84,7 +84,7 @@ const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bik
 // ---way 2
 const fifteenData = inventors.filter(inventor => inventor.year > 1500 && inventor.year <= 1599) // using arrow vv
 console.log(fifteenData);
-console.table(fifteenData); // new thing learnt
+console.table(fifteenData); // new thing learnt --->console.table()
 
 
 // Array.prototype.map()
