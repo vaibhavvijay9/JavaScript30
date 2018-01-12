@@ -40,10 +40,13 @@ console.log("Is everyone 19 or older?: ", allAdult);
 //         return true;
 // });
 
-const comm = comments.find(comment => comment.id == 102);
-console.log(comm);
-
+const comment = comments.find(comment => comment.id == 102);
+console.log(comment);
 
 // Array.prototype.findIndex()
 // Find the comment with this ID
 // delete the comment with the ID of 102
+const index = comments.findIndex(comment => comment.id == 103)
+console.log(index);
+
+comments.splice(index, 1); // delete the comment where id=103
