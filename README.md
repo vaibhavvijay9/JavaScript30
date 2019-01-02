@@ -8,3 +8,4 @@ A repository of the projects made during course- JavaScript30.
 * [05 - Flex Panels](https://vaibhavvijay9.github.io/JavaScript30/05-Flex-Panel-Gallery)
 * [06 - Type Ahead](https://vaibhavvijay9.github.io/JavaScript30/06-Type-Ahead)
 * [07 - Array Cardio 2](https://vaibhavvijay9.github.io/JavaScript30/07-Array-Cardio-Day-2)
+* [08 - Fun With HTML5 Canvas](https://vaibhavvijay9.github.io/JavaScript30/08-Fun-With-HTML5-Canvas)
